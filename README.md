@@ -61,7 +61,7 @@ Baseado no projeto original da professora [Camila Cavalcante](https://github.com
 <hr>
 <h3>Contribuindo</h3>
 
-Este repositório foi criado para fins de estudo, então contribua com ele.<br>
+Este repositório foi criado para fins de estudo.<br>
 
 Se possível:
 
