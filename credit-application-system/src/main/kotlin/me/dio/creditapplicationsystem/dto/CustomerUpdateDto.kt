@@ -5,7 +5,6 @@ import me.dio.creditapplicationsystem.entity.Customer
 import java.math.BigDecimal
 
 data class CustomerUpdateDto(
-    val id: Long,
     val firstName: String,
     val lastName: String,
     val income: BigDecimal,

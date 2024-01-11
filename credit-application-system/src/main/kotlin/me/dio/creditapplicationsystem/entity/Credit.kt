@@ -6,7 +6,7 @@ import java.math.BigDecimal
 import java.time.LocalDate
 
 @Entity
-@Table(name = "Credito")
+//@Table(name = "Credito")
 data class Credit(
     @Column(nullable = false, unique = true) val creditCode: java.util.UUID = java.util.UUID.randomUUID(),
     @Column(nullable = false) val creditValue: BigDecimal = BigDecimal.ZERO,
