@@ -1,4 +1,3 @@
 package me.dio.creditapplicationsystem.exception
 
-class BusinessException {
-}
+data class BusinessException(override val message: String?) : RuntimeException(message)
