@@ -18,19 +18,6 @@ data class CreditDto(
     @field:NotNull(message = "Invalid Id. Insert a valid customer Id ") val customerId: Long
 ) {
 
-    init {
-        validateDates()
-    }
-
-    private fun validateDates() {
-        val currentDate = LocalDate.now()
-        val maxDate = currentDate.plusMonths(3)
-
-        if (dayFirstOfInstallment.isBefore(currentDate) || dayFirstOfInstallment.isAfter(maxDate)) {
-            throw IllegalArgumentException("The date of the first installment must be no later than 3 months after the current day")
-        }
-    }
-
     fun toEntity(): Credit = Credit(
         creditValue = this.creditValue,
         dayFirstInstallment = this.dayFirstOfInstallment,

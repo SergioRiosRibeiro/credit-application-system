@@ -1,4 +1,4 @@
-package me.dio.credit.application.system.service
+package me.dio.creditapplicationsystem.service
 import io.mockk.*
 import io.mockk.impl.annotations.InjectMockKs
 import io.mockk.impl.annotations.MockK
@@ -119,7 +119,7 @@ class CreditServiceTest {
         //then
         Assertions.assertThatThrownBy { creditService.findByCreditCode(customerId, invalidCreditCode) }
             .isInstanceOf(BusinessException::class.java)
-            .hasMessage("Creditcode $invalidCreditCode not found")
+            .hasMessage("CreditCode $invalidCreditCode not found")
         //then
         verify(exactly = 1) { creditRepository.findByCreditCode(invalidCreditCode) }
     }
@@ -136,7 +136,7 @@ class CreditServiceTest {
         //then
         Assertions.assertThatThrownBy { creditService.findByCreditCode(customerId, creditCode) }
             .isInstanceOf(IllegalArgumentException::class.java)
-            .hasMessage("Contact admin")
+            .hasMessage("Contact Admin")
 
         verify { creditRepository.findByCreditCode(creditCode) }
     }
@@ -145,7 +145,7 @@ class CreditServiceTest {
         private fun buildCredit(
             creditValue: BigDecimal = BigDecimal.valueOf(100.0),
             dayFirstInstallment: LocalDate = LocalDate.now().plusMonths(2L),
-            numberOfInstallments: Int = 15,
+            numberOfInstallments: Int = 5,
             customer: Customer = CustomerServiceTest.buildCustomer()
         ): Credit = Credit(
             creditValue = creditValue,
