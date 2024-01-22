@@ -23,7 +23,7 @@ class RestExceptionHandler {
         }
         return ResponseEntity(
             ExceptionDetails(
-                title = "Bad request! Consult the documentation",
+                title = "Bad Request! Consult the documentation",
                 timeStamp = LocalDateTime.now(),
                 status = HttpStatus.BAD_REQUEST.value(),
                 exception = ex.javaClass.toString(),

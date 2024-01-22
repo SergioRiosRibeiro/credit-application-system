@@ -1,6 +1,5 @@
 package me.dio.creditapplicationsystem.dto.request
 
-import jakarta.validation.constraints.Future
 import jakarta.validation.constraints.FutureOrPresent
 import jakarta.validation.constraints.Max
 import jakarta.validation.constraints.Min
@@ -20,7 +19,7 @@ data class CreditDto(
 
     fun toEntity(): Credit = Credit(
         creditValue = this.creditValue,
-        dayFirstInstallment = this.dayFirstOfInstallment,
+        dayFirstOfInstallment = this.dayFirstOfInstallment,
         numberOfInstallments = this.numberOfInstallments,
         customer = Customer(id = this.customerId)
     )

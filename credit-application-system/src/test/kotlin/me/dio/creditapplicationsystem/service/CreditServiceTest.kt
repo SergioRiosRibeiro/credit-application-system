@@ -7,7 +7,6 @@ import me.dio.creditapplicationsystem.entity.Credit
 import me.dio.creditapplicationsystem.entity.Customer
 import me.dio.creditapplicationsystem.exception.BusinessException
 import me.dio.creditapplicationsystem.repository.CreditRepository
-import me.dio.creditapplicationsystem.service.CustomerServiceTest
 import me.dio.creditapplicationsystem.service.impl.CreditService
 import me.dio.creditapplicationsystem.service.impl.CustomerService
 import org.assertj.core.api.Assertions
@@ -149,7 +148,7 @@ class CreditServiceTest {
             customer: Customer = CustomerServiceTest.buildCustomer()
         ): Credit = Credit(
             creditValue = creditValue,
-            dayFirstInstallment = dayFirstInstallment,
+            dayFirstOfInstallment = dayFirstInstallment,
             numberOfInstallments = numberOfInstallments,
             customer = customer
         )

@@ -20,7 +20,7 @@ import org.springframework.test.context.ActiveProfiles
 import java.math.BigDecimal
 import kotlin.random.Random
 
-@ActiveProfiles("test")
+//@ActiveProfiles("test")
 @ExtendWith(MockKExtension::class)
 class CustomerServiceTest {
     @MockK
